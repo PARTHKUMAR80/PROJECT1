@@ -1,0 +1,194 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@1,700&display=swap');
+*{
+    padding: 0;
+    margin: 0;
+}
+html{
+    font-size: 10px;
+    font-family: 'Roboto Condensed', sans-serif;
+}
+.container{
+    min-height: 100vh;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    /* border: 2px solid red; */
+}
+#hero{
+    background-image: url('img.jpg');
+    /* background-size: cover; */
+    background-position: top center;
+    position: relative;
+    z-index: 1;
+}
+#hero::after{
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    background-color: black;
+    z-index: -1;
+    opacity: 0.5;
+}
+#hero h1{
+    display: block;
+    width: fit-content;
+    font-size: 5rem;
+    position: relative;
+    color: transparent;
+    animation: text_reveal 0.1s ease forwards;
+    animation-delay: 1s;
+}
+#hero .cta{
+    display: inline-block;
+    padding: 10px 30px;
+    color: crimson;
+    background-color: transparent;
+    border: 2px solid crimson;
+    font-size: 3rem;
+    text-transform: uppercase;
+    letter-spacing: 0.3rem;
+    margin-top: 16px;
+    transition: 1s ease background-color;
+}
+#hero .hero{
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 50px;
+    justify-content:flex-start;
+}
+#hero .cta:hover{
+    color: white;
+    background-color: crimson;
+    border-radius: 16px;
+}
+#hero h1 span{
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: crimson;
+    animation: text_reveal_box 2s ease forwards;
+    animation-delay: 0.3s;
+}
+#hero h1:nth-child(1){
+    animation-delay: 1s;
+}
+#hero h1:nth-child(2){
+    animation-delay: 2s;
+}
+#hero h1:nth-child(3){
+    animation: text_reveal_name 0.5s forwards;
+    animation-delay: 3s;
+}
+#hero h1:nth-child(1) span{
+    animation-delay: 0.1s;
+}
+#hero h1:nth-child(2) span{
+    animation-delay: 1.1s;
+}
+#hero h1:nth-child(3) span{
+    animation-delay: 2.1s;
+}
+@keyframes text_reveal_box{
+    50%{
+        width: 100%;
+        left: 0;
+    }
+    100%{
+        width: 0;
+        left: 100%;
+    }
+}
+@keyframes text_reveal{
+    50%{
+        color: red;
+    }
+    75%{
+        color: red;
+    }
+    90%{
+        color: red;
+    }
+    100%{
+        color: white;
+    }
+}
+@keyframes text_reveal_name{
+    100%{
+        color: red;
+    }
+}
+.bigcontainer{
+    display: flex;
+    border: 2px solid blue;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+.name{
+    /* border: 2px solid black; */
+    width: 182px;
+    margin-left: -16px;
+    margin-right: 1px;
+    height: 96px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.name p{
+    font-size: 3rem;
+}
+.navbar{
+    /* border: 2px solid blue; */
+    display: flex;
+    width: 1300px;
+}
+.mybox{
+    margin: 10px 10px;
+}
+#box1{
+    margin: 29px 94px;
+    padding: 2px 2px;
+}
+#box2{
+    margin: 29px 108px;
+}
+#box3{
+    margin: 29px 113px;
+}
+#box4{
+    margin: 29px 121px;
+}
+.navbar a{
+    font-size: 3rem;
+}
+header{
+    background-color: crimson;
+    opacity: 0.9;
+}
+#box1 a:hover{
+    color: white;
+    border-radius: 12px;
+    background-color: black;
+}
+#box2 a:hover{
+    color: white;
+    border-radius: 12px;
+    background-color: black;
+}
+#box3 a:hover{
+    color: white;
+    border-radius: 12px;
+    background-color: black;
+}
+#box4 a:hover{
+    color: white;
+    border-radius: 12px;
+    background-color: black;
+}
